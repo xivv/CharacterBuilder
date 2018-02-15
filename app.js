@@ -48,7 +48,7 @@ app.controller("featController", function ($scope,$http){
     }
 
     $scope.inventory = [];
-    
+    $scope.selectedItem;
 
     $scope.equipedItems = {
         "Head" : {slot:"Head",item:"Helmet"},
@@ -76,6 +76,16 @@ app.controller("featController", function ($scope,$http){
     });
     
     // CORE
+    
+    $scope.selectItem = function (item){
+        
+        if(!item || $scope.selectedItem == item){
+           
+            return;   
+        }
+        console.log(item);
+        $scope.selectedItem = item;
+    };
     
     $scope.equipItemFromInventory = function (item,index){
         

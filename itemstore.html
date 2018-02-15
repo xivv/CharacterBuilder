@@ -37,9 +37,36 @@
         
         
         <h3>Item Store</h3>
+        
+        <h4>Selected Item</h4>
+        
+        <table ng-show="selectedItem">
+            <tr>
+                <td>Name:</td>
+                <td>{{selectedItem.name}}</td>
+            </tr>
+            <tr>
+                <td>Description:</td>
+                <td>{{selectedItem.shortDescription}}</td>
+            </tr>
+            <tr>
+                <td>Proficiency:</td>
+                <td>{{selectedItem.proficiency}}</td>
+            </tr>
+            <tr>
+                <td>Cost:</td>
+                <td>{{selectedItem.cost}}gp</td>
+            </tr>
+             <tr>
+                <td>Weight:</td>
+                <td>{{selectedItem.weight}}lbs</td>
+            </tr>
+        </table>
+        
         <h5>Weapons</h5>
-        <select style="width:60%" multiple>
-            <option ng-repeat="weapon in weapons">{{weapon.name}}</option>
+        <select style="width:100%" multiple>
+            <option ng-click="selectItem(weapon)" ng-repeat="weapon in weapons">{{weapon.name}}
+            </option>
         </select>
         
     </body>
