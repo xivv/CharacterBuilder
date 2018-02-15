@@ -1,0 +1,48 @@
+<html>
+
+
+    <body>
+        <h3>Inventory</h3>
+        <table>
+            <tr>
+                <td>Funds:</td>
+                <td><input type="number"></td>
+            <tr>
+            <tr>
+                <td>Value:</td>
+                <td><input type="text" ng-disabled="true"></td>
+            </tr>  
+            <tr>
+                <td>Weight:</td>
+                <td><input type="text" ng-disabled="true"></td>
+            </tr>    
+        </table>
+        <table>
+            <tr ng-repeat="item in inventory">
+                <td draggable="true">{{item.item}}</td>
+                <td><input type="button" ng-click="equipItemFromInventory(item,$index)" value="Equip"></td>
+            </tr>
+        
+        </table>
+        
+        <h3>Available Slots</h3>
+        <table>
+            <tr ng-repeat="slot in equipedItems">
+                <td>{{slot.slot}}</td>
+                <td>{{slot.item}}</td>
+                <td><input ng-disabled="!slot.item" ng-click="unequipItemFromSlot(slot.slot)" type="button" value="Unequip"></td>
+            </tr>
+        
+        </table>
+        
+        
+        <h3>Item Store</h3>
+        <h5>Weapons</h5>
+        <select style="width:60%" multiple>
+            <option ng-repeat="weapon in weapons">{{weapon.name}}</option>
+        </select>
+        
+    </body>
+
+
+</html>

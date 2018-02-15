@@ -1,0 +1,42 @@
+<html>
+    <head>
+    
+        <link rel="stylesheet" href="stylesheet.css">
+    </head>
+    <div ng-model="featInformation">
+    <select ng-change="getTreeFromFeat(selected_feat)"  ng-model="selected_feat" multiple>
+        <option ng-repeat="feat in featList">{{feat.name}}: {{feat.shortDescription}}</option>
+    </select>
+    </div>
+    
+    <div ng-model="feat_tree">
+        
+        <h4>Selected Feat</h4>
+        <table>
+            <tr>
+                <td>{{selected_feat_from_tree.name}}</td>
+            </tr>
+            <tr>
+                <td>{{selected_feat_from_tree.benefits}}</td>
+            </tr>
+            <tr>
+                <td>{{selected_feat_from_tree.featTypes}}</td>
+            </tr>
+        </table>  
+        
+        <h4>Prerequisites needed</h4>
+        <table>
+            <tr ng-repeat="feat in featPrerequisiteTree">
+                <td ng-click="getTreeFromFeat(feat)">{{feat}}</td>
+            </tr>
+        </table>    
+        
+        <h4>Dependencys available</h4>
+        <table>
+            <tr ng-repeat="feat in featDependencyTree">
+                <td ng-click="getTreeFromFeat(feat)">{{feat}}</td>
+            </tr>
+        </table>    
+    </div>
+
+</html>

@@ -1,0 +1,17 @@
+{
+    "name": "Unarmed Strike",
+    "shortDescription" : "An umarmed strike is always considered a light weapon.",
+    "proficiency" : "Simple Weapons",
+    "subtype" : "Unarmed Attacks",
+    "cost": 0,
+    "damage": {
+        "small" : "1d2",
+        "medium" : "1d3"
+    },
+    "critical" : 2,
+    "range" : 0,
+    "weight": 0,
+    "types" : ["B"],
+    "specials" : ["Nonlethal"],
+    "source" :
+}

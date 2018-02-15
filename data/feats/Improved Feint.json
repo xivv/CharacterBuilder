@@ -1,0 +1,17 @@
+{
+    featname:   "Improved Feint",
+    prerequisites:  {
+        feats:      "Combat Expertise",
+        abilityscores:    "Intelligence:13",
+        other:  ""
+    },
+    description:    {
+        shortDescription:   "Feint as a move action",
+        featTypes:          "G,C"
+    },
+    benefits:       {
+        ability:    "You can make a Bluff check to feint in combat as a move action",
+        other:      ""
+    }
+
+}
