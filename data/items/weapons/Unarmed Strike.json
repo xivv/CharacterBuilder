@@ -1,6 +1,7 @@
 {
     "name": "Unarmed Strike",
     "shortDescription" : "An umarmed strike is always considered a light weapon.",
+    "slot" : "Weapon",
     "proficiency" : "Simple Weapons",
     "subtype" : "Unarmed Attacks",
     "cost": 0,

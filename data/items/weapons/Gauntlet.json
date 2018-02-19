@@ -1,6 +1,7 @@
 {
     "name": "Gauntlet",
     "shortDescription" : "This metal glove lets you deal letha damage with unarmed strikes.",
+    "slot" : "Weapon",
     "proficiency" : "Simple Weapons",
     "subtype" : "Unarmed Attacks",
     "cost": 2,

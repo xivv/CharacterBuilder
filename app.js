@@ -16,6 +16,7 @@ app.controller("featController", function ($scope,$http){
     $scope.weapons = { "Gauntlet" : {
     "name": "Gauntlet",
     "shortDescription" : "This metal glove lets you deal letha damage with unarmed strikes.",
+    "slot" : "Weapon",
     "proficiency" : "Simple Weapons",
     "subtype" : "Unarmed Attacks",
     "cost": 2,
@@ -32,6 +33,7 @@ app.controller("featController", function ($scope,$http){
     "Unarmed Strike" : {
     "name": "Unarmed Strike",
     "shortDescription" : "An umarmed strike is always considered a light weapon.",
+    "slot" : "Weapon",
     "proficiency" : "Simple Weapons",
     "subtype" : "Unarmed Attacks",
     "cost": 0,
@@ -49,6 +51,8 @@ app.controller("featController", function ($scope,$http){
 
     $scope.inventory = [];
     $scope.selectedItem;
+    $scope.characterFunds = 21000;
+    $scope.characterWeight = 0;
 
     $scope.equipedItems = {
         "Head" : {slot:"Head",item:"Helmet"},
@@ -77,19 +81,58 @@ app.controller("featController", function ($scope,$http){
     
     // CORE
     
+    
+    $scope.hasSlotFromInventory = function(item){
+        
+        
+        for(var i = 0; i < $scope.inventory.length;i++){
+           // console.log($scope.inventory[i]);
+            if($scope.inventory[i].name == item){
+                
+                console.log($scope.inventory[i].slot != "");
+                return $scope.inventory[i].slot != "";
+            }
+        }
+        
+        return false;
+    }
+    
+    $scope.buySelectedItem = function(){
+        
+        if($scope.selectedItem && $scope.characterFunds > $scope.selectedItem.cost){
+            
+            $scope.characterFunds -= $scope.selectedItem.cost;
+            $scope.characterWeight += $scope.selectedItem.weight;
+            $scope.inventory.push({slot:$scope.selectedItem.slot,item:$scope.selectedItem.name});
+        }
+        else{
+            console.log("Insufficient amount of money");
+        }
+        
+        
+    }
+    
     $scope.selectItem = function (item){
         
         if(!item || $scope.selectedItem == item){
            
             return;   
         }
-        console.log(item);
+        
+      //  console.log(item);
         $scope.selectedItem = item;
     };
     
     $scope.equipItemFromInventory = function (item,index){
         
+      
       if(item){
+          
+          if($scope.equipedItems[item.slot]){
+             
+             $scope.unequipItemFromSlot(item.slot);
+           }
+          
           $scope.equipedItems[item.slot] = item;
           $scope.inventory.splice(index,1);
       }

@@ -6,7 +6,7 @@
         <table>
             <tr>
                 <td>Funds:</td>
-                <td><input type="number"></td>
+                <td><input ng-model="characterFunds" type="number"></td>
             <tr>
             <tr>
                 <td>Value:</td>
@@ -14,13 +14,14 @@
             </tr>  
             <tr>
                 <td>Weight:</td>
-                <td><input type="text" ng-disabled="true"></td>
+                <td><input ng-model="characterWeight" type="text" ng-disabled="true"></td>
             </tr>    
         </table>
         <table>
-            <tr ng-repeat="item in inventory">
-                <td draggable="true">{{item.item}}</td>
-                <td><input type="button" ng-click="equipItemFromInventory(item,$index)" value="Equip"></td>
+            <tr ng-repeat="item in inventory track by $index">
+                <td>{{item.item}}</td>
+                <td><input type="button" ng-disabled="hasSlotFromInventory(item)" ng-click="equipItemFromInventory(item,$index)" value="Equip"></td>
+                <td><input type="button" ng-click="sellItemFromInventory(item,$index)" value="Sell"></td>
             </tr>
         
         </table>
@@ -60,6 +61,9 @@
              <tr>
                 <td>Weight:</td>
                 <td>{{selectedItem.weight}}lbs</td>
+            </tr>
+            <tr>
+                <td><input ng-disabled="selectedItem.cost > characterFunds" type="button" value="Buy" ng-click="buySelectedItem()"></td>
             </tr>
         </table>
         
