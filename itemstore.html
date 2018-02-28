@@ -19,7 +19,7 @@
         </table>
         <table>
             <tr ng-repeat="item in inventory track by $index">
-                <td>{{item.item}}</td>
+                <td>{{item.name}}</td>
                 <td><input type="button" ng-disabled="hasSlotFromInventory(item)" ng-click="equipItemFromInventory(item,$index)" value="Equip"></td>
                 <td><input type="button" ng-click="sellItemFromInventory(item,$index)" value="Sell"></td>
             </tr>
@@ -30,7 +30,7 @@
         <table>
             <tr ng-repeat="slot in equipedItems">
                 <td>{{slot.slot}}</td>
-                <td>{{slot.item}}</td>
+                <td>{{slot.name}}</td>
                 <td><input ng-disabled="!slot.item" ng-click="unequipItemFromSlot(slot.slot)" type="button" value="Unequip"></td>
             </tr>
         

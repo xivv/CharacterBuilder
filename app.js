@@ -55,20 +55,20 @@ app.controller("featController", function ($scope,$http){
     $scope.characterWeight = 0;
 
     $scope.equipedItems = {
-        "Head" : {slot:"Head",item:"Helmet"},
-        "Headband" : {slot:"Headband",item:"Headband of the Beast +2"},
-        "Eyes" : {slot:"Eyes",item:"Goggles of the Vulture"},
-        "Shoulders" : {slot:"Shoulders",item:"Cloak of Resistance +1"},
-        "Neck" : {slot:"Neck",item:"Fireresistance Necklace"},
-        "Chest" : {slot:"Chest",item:"Extador Leather"},
-        "Body" : {slot:"Body",item:""},
-        "Armor" : {slot:"Armor",item:"Chain Shirt +3"},
-        "Belt" : {slot:"Belt",item:"Belt of Bulls Strength +2"},
-        "Wrists" : {slot:"Wrists",item:""},
-        "Hands" : {slot:"Hands",item:"Gloves"},
-        "Ring1" : {slot:"Ring1",item:"Ring of Protection +4"},
-        "Ring2" : {slot:"Ring2",item:"Ring of Dunedan +2"},
-        "Feet" : {slot:"Feet",item:"Trousers"}
+        "Head" : {slot:"Head",item:null},
+        "Headband" : {slot:"Headband",item:null},
+        "Eyes" : {slot:"Eyes",item:null},
+        "Shoulders" : {slot:"Shoulders",item:null},
+        "Neck" : {slot:"Neck",item:null},
+        "Chest" : {slot:"Chest",item:null},
+        "Body" : {slot:"Body",item:null},
+        "Armor" : {slot:"Armor",item:null},
+        "Belt" : {slot:"Belt",item:null},
+        "Wrists" : {slot:"Wrists",item:null},
+        "Hands" : {slot:"Hands",item:null},
+        "Ring1" : {slot:"Ring1",item:null},
+        "Ring2" : {slot:"Ring2",item:null},
+        "Feet" : {slot:"Feet",item:null}
 };
     
     // LOADING
@@ -81,6 +81,15 @@ app.controller("featController", function ($scope,$http){
     
     // CORE
     
+    $scope.sellItemFromInventory = function(item,index){
+
+        if(item){
+
+            $scope.inventory.splice(index,1);
+            $scope.characterFunds += item.cost;
+            $scope.characterWeight -= item.weight;
+        }
+    }
     
     $scope.hasSlotFromInventory = function(item){
         
@@ -103,7 +112,7 @@ app.controller("featController", function ($scope,$http){
             
             $scope.characterFunds -= $scope.selectedItem.cost;
             $scope.characterWeight += $scope.selectedItem.weight;
-            $scope.inventory.push({slot:$scope.selectedItem.slot,item:$scope.selectedItem.name});
+            $scope.inventory.push($scope.selectedItem);
         }
         else{
             console.log("Insufficient amount of money");
