@@ -1,0 +1,20 @@
+{
+    "name": "Dagger",
+    "shortDescription" : "A dagger has a blade that is about 1 foot in length.",
+    "benefit" : "You get a +2 bonus on Sleight of Hand skill checks made to conceal a dagger on your body.",
+    "slot" : "Weapon",
+    "proficiency" : "Simple Weapons",
+    "subtype" : "Unarmed Attacks",
+    "cost": 2,
+    "damage": {
+        "small" : "1d3",
+        "medium" : "1d4"
+    },
+    "criticalMultiplier" : 2,
+    "criticalRange" : 2,
+    "range" : 10,
+    "weight": 1,
+    "types" : ["P","S"],
+    "specials" : [],
+    "source" :
+}
