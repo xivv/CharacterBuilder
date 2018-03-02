@@ -4,7 +4,7 @@
     "benefit" : "",
     "slot" : "Weapon",
     "proficiency" : "Simple Weapons",
-    "subtype" : "Unarmed Attacks",
+    "subtype" : "Unarmed Attack",
     "cost": 2,
     "damage": {
         "small" : "1d2",
@@ -17,5 +17,5 @@
     "weight": 1,
     "types" : ["B"],
     "specials" : [],
-    "source" :
+    "source" : ""
 }

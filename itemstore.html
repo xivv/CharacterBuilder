@@ -31,7 +31,7 @@
             <tr ng-repeat="slot in equipedItems">
                 <td>{{slot.slot}}</td>
                 <td>{{slot.name}}</td>
-                <td><input ng-disabled="!slot.item" ng-click="unequipItemFromSlot(slot.slot)" type="button" value="Unequip"></td>
+                <td><input ng-disabled="!slot.name" ng-click="unequipItemFromSlot(slot.slot)" type="button" value="Unequip"></td>
             </tr>
         
         </table>
@@ -39,34 +39,47 @@
         
         <h3>Item Store</h3>
         
-        <h4>Selected Item</h4>
-        
-        <table ng-show="selectedItem">
-            <tr>
-                <td>Name:</td>
-                <td>{{selectedItem.name}}</td>
-            </tr>
-            <tr>
-                <td>Description:</td>
-                <td>{{selectedItem.shortDescription}}</td>
-            </tr>
-            <tr>
-                <td>Proficiency:</td>
-                <td>{{selectedItem.proficiency}}</td>
-            </tr>
-            <tr>
-                <td>Cost:</td>
-                <td>{{selectedItem.cost}}gp</td>
-            </tr>
-             <tr>
-                <td>Weight:</td>
-                <td>{{selectedItem.weight}}lbs</td>
-            </tr>
-            <tr>
-                <td><input ng-disabled="selectedItem.cost > characterFunds" type="button" value="Buy" ng-click="buySelectedItem()"></td>
-            </tr>
-        </table>
-        
+        <div ng-show="selectedItem">
+        <h4>{{selectedItem.name}}</h4> 
+            
+            <i>{{selectedItem.shortDescription}}</i>
+            
+            <br> <br>
+            
+            <b>Benefit:</b> {{selectedItem.benefit}}
+            
+            <br> <br>
+            
+            <table>
+                <tr>
+                    <td>{{selectedItem.subtype}}</td>
+                    <td>Cost</td>
+                    <td>Dmg(S)</td>
+                    <td>Dmg(M)</td>
+                    <td>Critical</td>
+                    <td>Range</td>
+                    <td>Weight</td>
+                    <td>Type</td>
+                    <td>Special</td>
+                </tr>
+                <tr>
+                    <td>{{selectedItem.name}}</td>            
+                    <td>{{selectedItem.cost}}</td>
+                    <td>{{selectedItem.damage.small}}</td>
+                    <td>{{selectedItem.damage.medium}}</td>
+                    <td>{{selectedItem.criticalRange}}/x{{selectedItem.criticalMultiplier}}</td>
+                    <td>{{selectedItem.range}}</td>
+                    <td>{{selectedItem.weight}}</td>
+                    <td>{{selectedItem.types}}</td>
+                    <td>{{selectedItem.specials}}</td>
+                </tr>
+            </table>
+            
+                <tr>
+                    <td>{{selectedItem.source}}</td>
+                    <td><input ng-disabled="selectedItem.cost > characterFunds" type="button" value="Buy" ng-click="buySelectedItem()"></td>
+                </tr>
+        </div>
         <h5>Weapons</h5>
         <select style="width:100%" multiple>
             <option ng-click="selectItem(weapon)" ng-repeat="weapon in weapons">{{weapon.name}}

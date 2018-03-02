@@ -13,41 +13,7 @@ app.controller("featController", function ($scope,$http){
         "Deceptive Exchange": {name:"Deceptive Exchange",prerequisite:"feat:Improved Feint,Combat Expertise;int:13;",shortDescription:"Upon successful feint, you may force opponent to accept an object",featTypes:"G", benefits:"ability:If you successfully feint an opponent into accepting a one-handed object you are ...;"},
     };
     
-    $scope.weapons = { "Gauntlet" : {
-    "name": "Gauntlet",
-    "shortDescription" : "This metal glove lets you deal letha damage with unarmed strikes.",
-    "slot" : "Weapon",
-    "proficiency" : "Simple Weapons",
-    "subtype" : "Unarmed Attacks",
-    "cost": 2,
-    "damage": {
-        "small" : "1d2",
-        "medium" : "1d3"
-    },
-    "critical" : 2,
-    "range" : 0,
-    "weight": 1,
-    "types" : ["B"],
-    "specials" : [],
-    "source" : ""},
-    "Unarmed Strike" : {
-    "name": "Unarmed Strike",
-    "shortDescription" : "An umarmed strike is always considered a light weapon.",
-    "slot" : "Weapon",
-    "proficiency" : "Simple Weapons",
-    "subtype" : "Unarmed Attacks",
-    "cost": 0,
-    "damage": {
-        "small" : "1d2",
-        "medium" : "1d3"
-    },
-    "critical" : 2,
-    "range" : 0,
-    "weight": 0,
-    "types" : ["B"],
-    "specials" : ["Nonlethal"],
-    "source" : ""}                          
-    }
+    $scope.weapons = {};
 
     $scope.inventory = [];
     $scope.selectedItem;
@@ -55,29 +21,43 @@ app.controller("featController", function ($scope,$http){
     $scope.characterWeight = 0;
 
     $scope.equipedItems = {
-        "Head" : {slot:"Head",item:null},
-        "Headband" : {slot:"Headband",item:null},
-        "Eyes" : {slot:"Eyes",item:null},
-        "Shoulders" : {slot:"Shoulders",item:null},
-        "Neck" : {slot:"Neck",item:null},
-        "Chest" : {slot:"Chest",item:null},
-        "Body" : {slot:"Body",item:null},
-        "Armor" : {slot:"Armor",item:null},
-        "Belt" : {slot:"Belt",item:null},
-        "Wrists" : {slot:"Wrists",item:null},
-        "Hands" : {slot:"Hands",item:null},
-        "Ring1" : {slot:"Ring1",item:null},
-        "Ring2" : {slot:"Ring2",item:null},
-        "Feet" : {slot:"Feet",item:null}
+        "Head" : null,
+        "Headband" : null,
+        "Eyes" : null,
+        "Shoulders" : null,
+        "Neck" : null,
+        "Chest" : null,
+        "Body" : null,
+        "Armor" : null,
+        "Belt" : null,
+        "Wrists" : null,
+        "Hands" : null,
+        "Ring1" : null,
+        "Ring2" : null,
+        "Feet" : null
 };
     
     // LOADING
     
+    
     $http.get("./data/items/weapons/data.json").then(function(response){
         
-    
+        var values = response.data["weapons"];
         
+        for(var i = 0; i < values.length; i++){
+            
+            var url = "./data/items/weapons/XYZ.json";
+            url = url.replace("XYZ",values[i]); 
+
+            $http.get(url).then( function(response2){
+               
+               $scope.weapons[response2.data["name"]] = response2.data;
+               
+            });
+        }
     });
+
+   
     
     // CORE
     
@@ -153,9 +133,9 @@ app.controller("featController", function ($scope,$http){
     
     $scope.unequipItemFromSlot = function (slot){
 
-      if($scope.equipedItems[slot].item){
+      if($scope.equipedItems[slot]){
         $scope.inventory.push($scope.equipedItems[slot]);
-        $scope.equipedItems[slot] = {slot:slot,item:""};
+        $scope.equipedItems[slot] = null;
       }      
       else{
           console.log("Slot Exception: " + slot + ", Item:" + $scope.equipedItems[slot].item);
