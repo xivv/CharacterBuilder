@@ -4,6 +4,12 @@ var app = angular.module("characterBuilder",[]);
 
 app.controller("featController", function ($scope,$http){
 
+    // Character variables
+    
+    $scope.characterStrength = 14;
+    $scope.characterFunds = 21000;
+    $scope.characterWeight = 0;
+    
     // VARIABLES
 
       $scope.featList = {
@@ -14,11 +20,9 @@ app.controller("featController", function ($scope,$http){
     };
     
     $scope.weapons = {};
-
     $scope.inventory = [];
     $scope.selectedItem;
-    $scope.characterFunds = 21000;
-    $scope.characterWeight = 0;
+
 
     $scope.equipedItems = {
         "Head" : null,
@@ -34,7 +38,8 @@ app.controller("featController", function ($scope,$http){
         "Hands" : null,
         "Ring1" : null,
         "Ring2" : null,
-        "Feet" : null
+        "Feet" : null,
+        "Weapon" : null
 };
     
     // LOADING

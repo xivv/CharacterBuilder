@@ -2,8 +2,10 @@
 
 
     <body>
-        <h3>Inventory</h3>
-        <table>
+       
+        <div style="width: 100%;overflow:auto;">
+        <div style="float:left; width: 80%">
+        <table style="display: inline-block;">
             <tr>
                 <td>Funds:</td>
                 <td><input ng-model="characterFunds" type="number"></td>
@@ -16,7 +18,24 @@
                 <td>Weight:</td>
                 <td><input ng-model="characterWeight" type="text" ng-disabled="true"></td>
             </tr>    
+        </table>  
+        <table style="display: inline-block;">
+              <tr>
+                <td>Light Load:</td>
+                <td><input ng-model="characterWeight" type="text" ng-disabled="true"></td>
+              </tr>   
+             <tr>
+                <td>Medium Load:</td>
+                <td><input ng-model="characterWeight" type="text" ng-disabled="true"></td>
+              </tr> 
+             <tr>
+                <td>Heavy Load:</td>
+                <td><input ng-model="characterWeight" type="text" ng-disabled="true"></td>
+              </tr> 
         </table>
+        
+        <h3>Inventory</h3>
+        
         <table>
             <tr ng-repeat="item in inventory track by $index">
                 <td>{{item.name}}</td>
@@ -26,18 +45,8 @@
         
         </table>
         
-        <h3>Available Slots</h3>
-        <table>
-            <tr ng-repeat="slot in equipedItems">
-                <td>{{slot.slot}}</td>
-                <td>{{slot.name}}</td>
-                <td><input ng-disabled="!slot.name" ng-click="unequipItemFromSlot(slot.slot)" type="button" value="Unequip"></td>
-            </tr>
         
-        </table>
-        
-        
-        <h3>Item Store</h3>
+        <h3>Weapon Store</h3>
         
         <div ng-show="selectedItem">
         <h4>{{selectedItem.name}}</h4> 
@@ -67,25 +76,42 @@
                     <td>{{selectedItem.cost}}</td>
                     <td>{{selectedItem.damage.small}}</td>
                     <td>{{selectedItem.damage.medium}}</td>
-                    <td>{{selectedItem.criticalRange}}/x{{selectedItem.criticalMultiplier}}</td>
+                    <td>{{20 -selectedItem.criticalRange}}/x{{selectedItem.criticalMultiplier}}</td>
                     <td>{{selectedItem.range}}</td>
                     <td>{{selectedItem.weight}}</td>
                     <td>{{selectedItem.types}}</td>
                     <td>{{selectedItem.specials}}</td>
                 </tr>
+            
             </table>
+            <br>
             
                 <tr>
                     <td>{{selectedItem.source}}</td>
                     <td><input ng-disabled="selectedItem.cost > characterFunds" type="button" value="Buy" ng-click="buySelectedItem()"></td>
                 </tr>
+            
         </div>
         <h5>Weapons</h5>
-        <select style="width:100%" multiple>
+        <select multiple>
             <option ng-click="selectItem(weapon)" ng-repeat="weapon in weapons">{{weapon.name}}
             </option>
         </select>
+        </div>
+            
+        <div style="float:right;">
+            
+        <h3>Equipment</h3>
+        <table>
+            <tr ng-repeat="(slot,item) in equipedItems">
+                <td>{{slot}}</td>
+                <td ng-click="selectItem(item)">{{item.name}}</td>
+                <td><input ng-disabled="!item.name" ng-click="unequipItemFromSlot(item.slot)" type="button" value="Unequip"></td>
+            </tr>
         
+        </table>
+        </div>
+        </div>
     </body>
 
 

@@ -1,0 +1,20 @@
+{
+    "name": "Spear, totem",
+    "shortDescription" : "The spear's relatively wide head alows it to be used as a slahing weapon, swung side to side, or as a piercing weaon in a more traditiona spear-fighting technique.",
+    "benefit" : "If the user is trained in the spear's use, a totem spear can be used by bards to create bardic music effects using Perform (wind instrument). The spear itself has a strong, flexible shaft, and in the hands of one trained in its use, grants a +2 circumstance bonus on Acrobatics checks.",
+    "slot" : "Weapon",
+    "proficiency" : "Simple Weapons",
+    "subtype" : "Unarmed Attack",
+    "cost": 25,
+    "damage": {
+        "small" : "1d8",
+        "medium" : "1d10"
+    },
+    "criticalMultiplier" : 3,
+    "criticalRange" : 0,
+    "range" : 10,
+    "weight": 6,
+    "types" : ["P","S"],
+    "specials" : [],
+    "source" : ""
+}

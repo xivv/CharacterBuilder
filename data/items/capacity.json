@@ -1,0 +1,175 @@
+{
+    1 : {
+        
+        "Light Load" : 3,
+        "Medium Load" : 6,
+        "Heavy Load" : 10
+    },
+    2 : {
+        
+        "Light Load" : 6,
+        "Medium Load" : 13,
+        "Heavy Load" : 20
+    },
+    3 : {
+        
+        "Light Load" : 10,
+        "Medium Load" : 20,
+        "Heavy Load" : 30
+    },
+    4 : {
+        
+        "Light Load" : 13,
+        "Medium Load" : 26,
+        "Heavy Load" : 40
+    },
+    5 : {
+        
+        "Light Load" : 16,
+        "Medium Load" : 33,
+        "Heavy Load" : 50
+    },
+    6 : {
+        
+        "Light Load" : 20,
+        "Medium Load" : 40,
+        "Heavy Load" : 60
+    },
+    7 : {
+        
+        "Light Load" : 23,
+        "Medium Load" : 46,
+        "Heavy Load" : 70
+    },
+    8 : {
+        
+        "Light Load" : 26,
+        "Medium Load" : 53,
+        "Heavy Load" : 80
+    },
+    9 : {
+        
+        "Light Load" : 30,
+        "Medium Load" : 60,
+        "Heavy Load" : 90
+    },
+    10 : {
+        
+        "Light Load" : 33,
+        "Medium Load" : 66,
+        "Heavy Load" : 100
+    },
+    11 : {
+        
+        "Light Load" : 38,
+        "Medium Load" : 76,
+        "Heavy Load" : 115
+    },
+    12 : {
+        
+        "Light Load" : 43,
+        "Medium Load" : 86,
+        "Heavy Load" : 130
+    },
+    13 : {
+        
+        "Light Load" : 50,
+        "Medium Load" : 100,
+        "Heavy Load" : 150
+    },
+    14 : {
+        
+        "Light Load" : 58,
+        "Medium Load" : 116,
+        "Heavy Load" : 175
+    },
+    15 : {
+        
+        "Light Load" : 66,
+        "Medium Load" : 133,
+        "Heavy Load" : 200
+    },
+    16 : {
+        
+        "Light Load" : 76,
+        "Medium Load" : 153,
+        "Heavy Load" : 230
+    },
+    17 : {
+        
+        "Light Load" : 87,
+        "Medium Load" : 173,
+        "Heavy Load" : 260
+    },
+    18 : {
+        
+        "Light Load" : 100,
+        "Medium Load" : 200,
+        "Heavy Load" : 300
+    },
+    19 : {
+        
+        "Light Load" : 116,
+        "Medium Load" : 233,
+        "Heavy Load" : 350
+    },
+    20 : {
+        
+        "Light Load" : 133,
+        "Medium Load" : 266,
+        "Heavy Load" : 400
+    },
+    21 : {
+        
+        "Light Load" : 153,
+        "Medium Load" : 306,
+        "Heavy Load" : 460
+    },
+    22 : {
+        
+        "Light Load" : 173,
+        "Medium Load" : 346,
+        "Heavy Load" : 520
+    },
+    23 : {
+        
+        "Light Load" : 200,
+        "Medium Load" : 400,
+        "Heavy Load" : 600
+    },
+    24 : {
+        
+        "Light Load" : 233,
+        "Medium Load" : 466,
+        "Heavy Load" : 700
+    },
+    25 : {
+        
+        "Light Load" : 266,
+        "Medium Load" : 533,
+        "Heavy Load" : 800
+    },
+    26 : {
+        
+        "Light Load" : 306,
+        "Medium Load" : 613,
+        "Heavy Load" : 920
+    },
+    27 : {
+        
+        "Light Load" : 346,
+        "Medium Load" : 693,
+        "Heavy Load" : 1040
+    },
+    28 : {
+        
+        "Light Load" : 400,
+        "Medium Load" : 800,
+        "Heavy Load" : 1200
+    },
+    29 : {
+        
+        "Light Load" : 466,
+        "Medium Load" : 933,
+        "Heavy Load" : 1400
+    }
