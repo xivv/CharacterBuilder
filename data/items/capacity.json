@@ -1,175 +1,176 @@
 {
-    1 : {
+    "1" : {
         
-        "Light Load" : 3,
-        "Medium Load" : 6,
-        "Heavy Load" : 10
+        "LightLoad" : 3,
+        "MediumLoad" : 6,
+        "HeavyLoad" : 10
     },
-    2 : {
+    "2" : {
         
-        "Light Load" : 6,
-        "Medium Load" : 13,
-        "Heavy Load" : 20
+        "LightLoad" : 6,
+        "MediumLoad" : 13,
+        "HeavyLoad" : 20
     },
-    3 : {
+    "3" : {
         
-        "Light Load" : 10,
-        "Medium Load" : 20,
-        "Heavy Load" : 30
+        "LightLoad" : 10,
+        "MediumLoad" : 20,
+        "HeavyLoad" : 30
     },
-    4 : {
+    "4" : {
         
-        "Light Load" : 13,
-        "Medium Load" : 26,
-        "Heavy Load" : 40
+        "LightLoad" : 13,
+        "MediumLoad" : 26,
+        "HeavyLoad" : 40
     },
-    5 : {
+    "5" : {
         
-        "Light Load" : 16,
-        "Medium Load" : 33,
-        "Heavy Load" : 50
+        "LightLoad" : 16,
+        "MediumLoad" : 33,
+        "HeavyLoad" : 50
     },
-    6 : {
+    "6" : {
         
-        "Light Load" : 20,
-        "Medium Load" : 40,
-        "Heavy Load" : 60
+        "LightLoad" : 20,
+        "MediumLoad" : 40,
+        "HeavyLoad" : 60
     },
-    7 : {
+    "7" : {
         
-        "Light Load" : 23,
-        "Medium Load" : 46,
-        "Heavy Load" : 70
+        "LightLoad" : 23,
+        "MediumLoad" : 46,
+        "HeavyLoad" : 70
     },
-    8 : {
+    "8" : {
         
-        "Light Load" : 26,
-        "Medium Load" : 53,
-        "Heavy Load" : 80
+        "LightLoad" : 26,
+        "MediumLoad" : 53,
+        "HeavyLoad" : 80
     },
-    9 : {
+    "9" : {
         
-        "Light Load" : 30,
-        "Medium Load" : 60,
-        "Heavy Load" : 90
+        "LightLoad" : 30,
+        "MediumLoad" : 60,
+        "HeavyLoad" : 90
     },
-    10 : {
+    "10" : {
         
-        "Light Load" : 33,
-        "Medium Load" : 66,
-        "Heavy Load" : 100
+        "LightLoad" : 33,
+        "MediumLoad" : 66,
+        "HeavyLoad" : 100
     },
-    11 : {
+    "11" : {
         
-        "Light Load" : 38,
-        "Medium Load" : 76,
-        "Heavy Load" : 115
+        "LightLoad" : 38,
+        "MediumLoad" : 76,
+        "HeavyLoad" : 115
     },
-    12 : {
+    "12" : {
         
-        "Light Load" : 43,
-        "Medium Load" : 86,
-        "Heavy Load" : 130
+        "LightLoad" : 43,
+        "MediumLoad" : 86,
+        "HeavyLoad" : 130
     },
-    13 : {
+    "13" : {
         
-        "Light Load" : 50,
-        "Medium Load" : 100,
-        "Heavy Load" : 150
+        "LightLoad" : 50,
+        "MediumLoad" : 100,
+        "HeavyLoad" : 150
     },
-    14 : {
+    "14" : {
         
-        "Light Load" : 58,
-        "Medium Load" : 116,
-        "Heavy Load" : 175
+        "LightLoad" : 58,
+        "MediumLoad" : 116,
+        "HeavyLoad" : 175
     },
-    15 : {
+    "15" : {
         
-        "Light Load" : 66,
-        "Medium Load" : 133,
-        "Heavy Load" : 200
+        "LightLoad" : 66,
+        "MediumLoad" : 133,
+        "HeavyLoad" : 200
     },
-    16 : {
+    "16" : {
         
-        "Light Load" : 76,
-        "Medium Load" : 153,
-        "Heavy Load" : 230
+        "LightLoad" : 76,
+        "MediumLoad" : 153,
+        "HeavyLoad" : 230
     },
-    17 : {
+    "17" : {
         
-        "Light Load" : 87,
-        "Medium Load" : 173,
-        "Heavy Load" : 260
+        "LightLoad" : 87,
+        "MediumLoad" : 173,
+        "HeavyLoad" : 260
     },
-    18 : {
+    "18" : {
         
-        "Light Load" : 100,
-        "Medium Load" : 200,
-        "Heavy Load" : 300
+        "LightLoad" : 100,
+        "MediumLoad" : 200,
+        "HeavyLoad" : 300
     },
-    19 : {
+    "19" : {
         
-        "Light Load" : 116,
-        "Medium Load" : 233,
-        "Heavy Load" : 350
+        "LightLoad" : 116,
+        "MediumLoad" : 233,
+        "HeavyLoad" : 350
     },
-    20 : {
+    "20" : {
         
-        "Light Load" : 133,
-        "Medium Load" : 266,
-        "Heavy Load" : 400
+        "LightLoad" : 133,
+        "MediumLoad" : 266,
+        "HeavyLoad" : 400
     },
-    21 : {
+    "21" : {
         
-        "Light Load" : 153,
-        "Medium Load" : 306,
-        "Heavy Load" : 460
+        "LightLoad" : 153,
+        "MediumLoad" : 306,
+        "HeavyLoad" : 460
     },
-    22 : {
+    "22" : {
         
-        "Light Load" : 173,
-        "Medium Load" : 346,
-        "Heavy Load" : 520
+        "LightLoad" : 173,
+        "MediumLoad" : 346,
+        "HeavyLoad" : 520
     },
-    23 : {
+    "23" : {
         
-        "Light Load" : 200,
-        "Medium Load" : 400,
-        "Heavy Load" : 600
+        "LightLoad" : 200,
+        "MediumLoad" : 400,
+        "HeavyLoad" : 600
     },
-    24 : {
+    "24" : {
         
-        "Light Load" : 233,
-        "Medium Load" : 466,
-        "Heavy Load" : 700
+        "LightLoad" : 233,
+        "MediumLoad" : 466,
+        "HeavyLoad" : 700
     },
-    25 : {
+    "25" : {
         
-        "Light Load" : 266,
-        "Medium Load" : 533,
-        "Heavy Load" : 800
+        "LightLoad" : 266,
+        "MediumLoad" : 533,
+        "HeavyLoad" : 800
     },
-    26 : {
+    "26" : {
         
-        "Light Load" : 306,
-        "Medium Load" : 613,
-        "Heavy Load" : 920
+        "LightLoad" : 306,
+        "MediumLoad" : 613,
+        "HeavyLoad" : 920
     },
-    27 : {
+    "27" : {
         
-        "Light Load" : 346,
-        "Medium Load" : 693,
-        "Heavy Load" : 1040
+        "LightLoad" : 346,
+        "MediumLoad" : 693,
+        "HeavyLoad" : 1040
     },
-    28 : {
+    "28" : {
         
-        "Light Load" : 400,
-        "Medium Load" : 800,
-        "Heavy Load" : 1200
+        "LightLoad" : 400,
+        "MediumLoad" : 800,
+        "HeavyLoad" : 1200
     },
-    29 : {
+    "29" : {
         
-        "Light Load" : 466,
-        "Medium Load" : 933,
-        "Heavy Load" : 1400
+        "LightLoad" : 466,
+        "MediumLoad" : 933,
+        "HeavyLoad" : 1400
     }
+}

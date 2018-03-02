@@ -22,18 +22,17 @@
         <table style="display: inline-block;">
               <tr>
                 <td>Light Load:</td>
-                <td><input ng-model="characterWeight" type="text" ng-disabled="true"></td>
+                <td><input ng-model-options="{ getterSetter: true }" ng-model="getCapacityFromStrength(1)" type="text" ng-disabled="true"></td>
               </tr>   
              <tr>
                 <td>Medium Load:</td>
-                <td><input ng-model="characterWeight" type="text" ng-disabled="true"></td>
+                <td><input ng-model-options="{ getterSetter: true }" ng-model="getCapacityFromStrength(2)" type="text" ng-disabled="true"></td>
               </tr> 
              <tr>
                 <td>Heavy Load:</td>
-                <td><input ng-model="characterWeight" type="text" ng-disabled="true"></td>
+                <td><input ng-model-options="{ getterSetter: true }" ng-model="getCapacityFromStrength(3)" type="text" ng-disabled="true"></td>
               </tr> 
         </table>
-        
         <h3>Inventory</h3>
         
         <table>
@@ -61,15 +60,15 @@
             
             <table>
                 <tr>
-                    <td>{{selectedItem.subtype}}</td>
-                    <td>Cost</td>
-                    <td>Dmg(S)</td>
-                    <td>Dmg(M)</td>
-                    <td>Critical</td>
-                    <td>Range</td>
-                    <td>Weight</td>
-                    <td>Type</td>
-                    <td>Special</td>
+                    <th>{{selectedItem.subtype}}</th>
+                    <th>Cost</th>
+                    <th>Dmg(S)</th>
+                    <th>Dmg(M)</th>
+                    <th>Critical</th>
+                    <th>Range</th>
+                    <th>Weight</th>
+                    <th>Type</th>
+                    <th>Special</th>
                 </tr>
                 <tr>
                     <td>{{selectedItem.name}}</td>            
@@ -97,6 +96,7 @@
             <option ng-click="selectItem(weapon)" ng-repeat="weapon in weapons">{{weapon.name}}
             </option>
         </select>
+        </div>
         </div>
             
         <div style="float:right;">

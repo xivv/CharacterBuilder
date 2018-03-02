@@ -1,0 +1,18 @@
+{
+    "name": "Studded leather",
+    "shortDescription" : "Similar to leather armor, this suit is reinforced with smal metal studs.",
+    "benefit" : "",
+    "slot" : "Armor",
+    "proficiency" : "Light Armor",
+    "cost": 25,
+    "armorBonus" : 3,
+    "maximumDexBonus" : 5,
+    "armorCheckPenalty" : -1,
+    "arcaneSpellFailure" : 15,
+    "speed" : {
+        "30" : 30,
+        "20" : 20
+    },
+    "weight": 25,
+    "source" : ""
+}

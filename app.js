@@ -9,7 +9,7 @@ app.controller("featController", function ($scope,$http){
     $scope.characterStrength = 14;
     $scope.characterFunds = 21000;
     $scope.characterWeight = 0;
-    
+
     // VARIABLES
 
       $scope.featList = {
@@ -20,10 +20,12 @@ app.controller("featController", function ($scope,$http){
     };
     
     $scope.weapons = {};
+    $scope.armor = {};
+    
     $scope.inventory = [];
     $scope.selectedItem;
-
-
+    $scope.capacity = [];
+    
     $scope.equipedItems = {
         "Head" : null,
         "Headband" : null,
@@ -61,10 +63,49 @@ app.controller("featController", function ($scope,$http){
             });
         }
     });
+    
+     $http.get("./data/items/armor/data.json").then(function(response){
+        
+        var values = response.data["armor"];
+        
+        for(var i = 0; i < values.length; i++){
+            
+            var url = "./data/items/armor/XYZ.json";
+            url = url.replace("XYZ",values[i]); 
+
+            $http.get(url).then( function(response2){
+               
+               $scope.armor[response2.data["name"]] = response2.data;
+               
+            });
+        }
+    });
+    
+     $http.get("./data/items/capacity.json").then(function(response){
+        
+         for(var i = 1; i < 29; i++){
+             $scope.capacity.push(response.data[i]);
+         }
+    });
 
    
     
     // CORE
+    
+    
+    $scope.getCapacityFromStrength = function(loadLevel){
+ 
+        var grabber = "LightLoad";
+        
+        if(loadLevel == 2){
+            grabber = "MediumLoad";    
+        }
+        else if(loadLevel == 3){
+            grabber = "HeavyLoad";
+        }
+
+        return $scope.capacity[$scope.characterStrength][grabber];
+    }
     
     $scope.sellItemFromInventory = function(item,index){
 

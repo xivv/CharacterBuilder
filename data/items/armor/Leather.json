@@ -1,0 +1,18 @@
+{
+    "name": "Leather",
+    "shortDescription" : "Leather armor is made up of pieces of hard boiled leather carefully sewn together.",
+    "benefit" : "",
+    "slot" : "Armor",
+    "proficiency" : "Light Armor",
+    "cost": 10,
+    "armorBonus" : 2,
+    "maximumDexBonus" : 6,
+    "armorCheckPenalty" : 0,
+    "arcaneSpellFailure" : 10,
+    "speed" : {
+        "30" : 30,
+        "20" : 20
+    },
+    "weight": 15,
+    "source" : ""
+}
